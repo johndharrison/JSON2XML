@@ -11,16 +11,16 @@ require(JSON2XML)
 fileURL <-  "http://api.sportsdatallc.org/nfl-t1/2013/REG/1/statistics.xml?api_key=4dhyq3f3rfkp2cbm4yqbcuag"
 xData <- readLines(fileURL)
 jData <- xml2JSON(paste(xData, collapse='')) # convert to JSON
-out <- fromJSON(jData)
+out <- RJSONIO::fromJSON(jData)
 do.call(rbind.data.frame, out$games$game[[1]]$team[[1]][[c('defense', 'player')]])
 ```
 #### `json2XML`
 
 ```
 require(JSON2XML)
-jsonString <- toJSON(list(a=1, r = list(b = 2:3, c= 'd')), collapse = '')
+jsonString <- RJSONIO::toJSON(list(a=1, r = list(b = 2:3, c= 'd')), collapse = '')
 xData <- json2XML(jsonString)
-xmlParse(json2XML(jsonString))
+XML::xmlParse(json2XML(jsonString))
 ```
 
 ### Getting started
