@@ -1,0 +1,16 @@
+Package: JSON2XML
+Type: Package
+Title: Convert JSON to XML
+Version: 0.0.1
+Date: 2014-04-27
+Authors@R: "John Harrison <johndharrison0@gmail.com> [aut, cre]"
+Description: Methods to convert an XML text into a JSON Object, and to covert a
+    JSON Object into an XML text
+License: AGPL-3
+URL: http://johndharrison.github.io/JSON2XML
+BugReports: http://github.com/johndharrison/JSON2XML/issues
+Imports:
+    rJava (>= 0.9-6),
+    RJSONIO,
+    XML
+SystemRequirements: Java
